@@ -1,348 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allan Tafadzwa Mashuwa | Software Developer</title>
+    <!--<link rel="stylesheet" href="style.css" />-->
+    <style>
+      /*CSS (style.css):*```css**/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Allan Tafadzwa Mashuwa | Software Developer</title>
-  <!--<link rel="stylesheet" href="style.css" />-->
-  <style>
-    /*CSS (style.css):*```css**/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #121212;
+        color: #fff;
+      }
 
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #121212;
-    color: #fff;
-}
-
-
-header {
-    position: sticky;
-    top: 0;
-    background: #1f1f1f;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    z-index: 1000;
-}
-
-nav a,
-.buttons a,
-.skills-grid,
-.project-card {
-    transition: all 0.3s ease;
-}
-
-nav a {
-    color: #ccc;
-    margin-left: 1.5rem;
-    text-decoration: none;
-}
-
-nav a:hover, .skills-grid span:hover {
-    color: #00bcd4;
-}
-
-.logo {
-    color: #00bcd4;
-    border: none;
-    font-size: 20px;
-    border-bottom: 1px solid rgb(0, 200, 255);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-}
-
-.hero {
-    display: flex;
-    border-radius: 3px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(to right, #2c2c2c, #1a1a1a);
-    box-shadow: 0 0 10px rgb(0, 200, 255);
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-}
-
-.hero-content h2 {
-    font-weight: 400;
-    color: #ccc;
-}
-
-
-.hero-content p {
-    margin: 1rem 0;
-}
-.me p{
-    margin: 1rem 0;   
-}
-.hero-content{
-    animation: fadein 1s ease forwards;
-    opacity: 0;
-}
-@keyframes fadein{
-    from{opacity: 0;
-    transform: translateY(20px);
-}to{
-    opacity: 1;
-    transform: translateY(0);
-}
-}
-
-.buttons a {
-    padding: 0.5rem 1rem;
-    background: #00bcd4;
-    color: #000;
-    text-decoration: none;
-    margin-right: 1rem;
-    border-radius: 4px;
-}
-
-.buttons a:hover {
-    box-shadow: 0 0 10px rgb(0, 200, 255);
-}
-
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-
-    border: 3px solid #00bcd4;
-    transition: transform 0.5s ease;
-}
-
-.profile-pic:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgb(0, 200, 255);
-}
-
-.photo-placeholder {
-    background-image: url(Al.jpg);
-    width: 150px;
-    height: 150px;
-    background: #333;
-    border-radius: 50%;
-}
-
-section {
-    padding: 3rem 2rem;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.project-card {
-    background: #1f1f1f;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.skills-grid span {
-    background: #2a2a2a;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-input,
-textarea {
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-}
-
-button {
-    background: #00bcd4;
-    border: none;
-    padding: 0.75rem;
-    color: #000;
-    font-weight: bold;
-    border-radius: 4px;
-}
-
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    background: #1f1f1f;
-}
-@media (max-width: 768){
-    header{
-        
-    align-items: flex-start ;
-
-}
-nav{
-    margin-top: 0.5rem;
-
-}
-.hero{
-    flex-direction: column;
-    text-align: center;
-}
-.hero-content h1{
-    font-size: 2.2rem;
-
-}
-.hero-content h2{
-    font-size: 2.2rem;
-
-}
-.photo-placeholder{
-    margin-top: 2rem;
-}
-.skills-grid{
-    flex-direction: column;
-
-}
-}
-@media(max-width: 480px){
-    .hero{
-        
+      header {
+        position: sticky;
+        top: 0;
+        background: #1f1f1f;
         display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        height: 100%;
-        
-    }
-    .hero-content{
-        margin: auto;
-        width: auto;
-        order: 2;
-    }
-    .hero-content h1{
-        font-size: 1.8rem;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        z-index: 1000;
+      }
 
-    }
-    .hero-content h2{
-        font-size: .9rem;
+      nav a,
+      .buttons a,
+      .skills-grid,
+      .project-card {
+        transition: all 0.3s ease;
+      }
+
+      nav a {
+        color: #ccc;
+        margin-left: 1.5rem;
+        text-decoration: none;
+      }
+
+      nav a:hover,
+      .skills-grid span:hover {
+        color: #00bcd4;
+      }
+
+      .logo {
+        color: #00bcd4;
+        border: none;
+        font-size: 20px;
+        border-bottom: 1px solid rgb(0, 200, 255);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+      }
+
+      .hero {
+        display: flex;
+        border-radius: 3px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4rem 2rem;
+               background: linear-gradient(to right, #2c2c2c, #1a1a1a);
+        box-shadow: 0 0 10px rgb(0, 200, 255);
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+
+      .hero-content h2 {
         font-weight: 400;
-    
-    }
-    .hero-image{
-        margin: auto;
-        height: auto;
-        width: auto;
-    }
-    .hero-content p{
-        font-size: .8rem;
-    
-    }
-    .buttons a{
-        display: block;
-        margin-bottom: 1rem;
+        color: #ccc;
+      }
+
+      .hero-content p {
+        margin: 1rem 0;
+      }
+
+      .me p {
+        margin: 1rem 0;
+      }
+
+      .hero-content {
+        animation: fadein 1.15s ease forwards;
+        opacity: 0;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .buttons a {
+        padding: 0.5rem 1rem;
+        border: 1px solid #00bcd4;
+        color: #ccc;
+        text-decoration: none;
+        margin-right: 1rem;
+        border-radius: 4px;
+      }
+
+      .buttons a:hover {
+        box-shadow: 0 0 10px rgb(0, 200, 255);
+      }
+
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ffffff;
+        transition: transform 0.75s ease;
+      }
+
+      .photo-placeholder {
+        background-image: url(Al.jpg);
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        background: #333;
+        border-radius: 50%;
+        transition: transform 0.5s ease;
+      }
+
+      .profile-pic:hover,
+      .photo-placeholder {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgb(0, 200, 255);
+      }
+
+      section {
+        padding: 3rem 2rem;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+      .dopefabricscard {
+        border: 2px solid whitesmoke;
+        border-radius: 20px;
+        background-color: #0ec257;
+        background: transparent;
+        width: 25%;
+        scrollbar-width: none;
+        height: 50%;
+        box-shadow: 0 0 10px rgb(255, 255, 255);
+        overflow-y: auto;
+      }
+      .dopefabricscard img {
+        width: 100%;
+      }
+
+      .project-card {
+        background: #1f1f1f;
+        border: 1px solid #00bcd4;
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .skills-grid span {
+        background: #2a2a2a;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      input,
+      textarea {
+        padding: 0.75rem;
+        border: none;
+        border-radius: 4px;
+      }
+
+      button {
+        background: #00bcd4;
+        border: none;
+        padding: 0.75rem;
+        color: #000;
+        font-weight: bold;
+        border-radius: 4px;
+      }
+
+      footer {
         text-align: center;
-    }
-    .logo{
-        font-size:15px;
-    }
-    nav a{
-        font-size: 7.5px;
-    }
-}
-  </style>
-</head>
+        padding: 1.5rem;
+        background: #1f1f1f;
+      }
+      @media (max-width: 320px){
+        .dopefabricscard {
+          margin-bottom: 15px;
+          width: 40%;
+          font-size: 0.8rem;
+          height: 40%;
+          object-fit: cover;
+        }
+      }
+      
+      
+      @media (max-width: 720) {
+        header {
+          align-items: flex-start;
+        }
 
-<body>
-  <header>
-    <div class="logo">mashuallan</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+        nav {
+          margin-top: 0.5rem;
+        }
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Allan Tafadzwa</h1>
-      <h2>Software Developer | Web Designer | Tech Enthusiast</h2>
-      <p>Building seamless digital experiences from front to back.</p>
-      <div class="buttons">
-        <a href="#projects">View Projects</a>
-        <a href="#contact">Contact Me</a>
+        .hero {
+          flex-direction: column;
+          text-align: center;
+          
+        }
+
+        .hero-content h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero-content h2 {
+          font-size: 2.2rem;
+        }
+
+        .photo-placeholder {
+          margin-top: 2rem;
+        }
+        .dopefabricscard {
+          margin-bottom: 15px;
+          width: 40%;
+          font-size: 0.8rem;
+          height: 40%;
+          object-fit: cover;
+        }
+        .skills-grid {
+          flex-direction: column;
+        }
+  
+      
+    }  
+    @media (min-width: 1201px){
+      .dopefabricscard {
+        margin-bottom: 15px;
+        width: 40%;
+        font-size: 0.8rem;
+        height: 40%;
+        object-fit: cover;
+      }
+    }
+  @media (min-width: 769px ) and (max-width: 1200){
+      .dopefabricscard {
+        margin-bottom: 15px;
+        width: 40%;
+        font-size: 0.8rem;
+        height: 40%;
+        object-fit: cover;
+      }
+    }
+     @media (min-width: 481px) and (max-width: 768px){
+        .dopefabricscard {
+          margin-bottom: 15px;
+          width: 40%;
+          font-size: 0.8rem;
+          height: 40%;
+          object-fit: cover;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero {
+          display: flex;
+          width: 100%;
+          flex-wrap: wrap;
+          height: 100%;
+        }
+        .dopefabricscard {
+          margin-bottom: 15px;
+          width: 40%;
+          font-size: 0.8rem;
+          height: 40%;
+          object-fit: cover;
+        }
+
+        .hero-content {
+          margin: auto;
+          width: auto;
+          order: 2;
+        }
+/**.me{
+  margin:auto;
+  width: auto;
+}**/
+        .hero-content h1 {
+          font-size: 1.8rem;
+        }
+
+        .hero-content h2 {
+          font-size: 0.9rem;
+          font-weight: 400;
+        }
+
+        .hero-image {
+          margin: auto;
+          height: auto;
+          width: auto;
+        }
+
+        .hero-content p {
+          font-size: 0.8rem;
+        }
+
+        .buttons a {
+          display: block;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+
+        .logo {
+          font-size: 15px;
+        }
+
+        nav a {
+          font-size: 7.5px;
+        }
+      }
+      .contact a {
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+        color: black;
+        background: #00bcd4;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: transform 1s ease;
+      }
+
+      .contact {
+        text-align: center;
+      }
+
+      .contact a:hover {
+        transform: scale(2.05);
+        box-shadow: 0 0 10px rgb(0, 200, 255);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">mashuallan</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Allan Tafadzwa</h1>
+        <h2>Software Developer | Web Designer | Tech Enthusiast</h2>
+        <p>Building seamless digital experiences from front to back.</p>
+        <div class="buttons">
+          <a href="#projects">View Projects</a>
+          <a href="#contact" style="background: #00bcd4; color: #000"
+            >Contact Me</a
+          >
+        </div>
       </div>
-    </div>
-    <div class="hero-image">
-      <!-- Placeholder for image -->
-      <div class="photo-placeholder"><img src="profile_pic.jpg" alt="profile picture" class="profile-pic"></div>
-    </div>
-  </section>
-
-  <section class="me" id="about">
-    <!--h3>About Me</h3-->
-    <span style="font-size: 40px;">Hi, I'm</span><br>
-    <span style="font-size: 50px;color: #00bcd4;">Tafadzwa Allan Praise Mashuwa</span>
-    <span style="color:#ccc ;">
-
-      <p>A Tech Enthusiast, Software Developer and UI/UX Designer.
-        I build web and desktop apps with love for clean UI an seamless UX. Based in Zimbabwe,
-        I enjoy coding creative and functional solution.
-      </p>
-      <p>Full stack developer, passionate about building efficient web apps using modern technologies.</p>
-    </span>
-
-  </section>
-
-  <section id="projects">
-    <h3>Projects</h3>
-    <div class="project-grid">
-      <!-- Example project -->
-      <div class="project-card">
-        <img src="project1.jpg" alt="Project Screenshot" />
-        <h4>Project Title</h4>
-        <p>Short project description.</p>
-        <a href="#">View on GitHub</a>
+      <div class="hero-image">
+        <!-- Placeholder for image -->
+        <div class="photo-placeholder">
+          <img
+            src="profile_pic.jpg"
+            alt="profile picture"
+            class="profile-pic"
+          />
+        </div>
       </div>
-      <!-- More cards... -->
-    </div>
-  </section>
+    </section>
 
-  <section id="skills">
-    <h3>Skills</h3>
-    <div class="skills-grid">
-      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
-      <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Git</span>
-    </div>
-  </section>
+    <section class="me" id="about">
+      <!--h3>About Me</h3-->
+      <span style="font-size: 40px">Hi, I'm</span><br />
+      <span style="font-size: 50px; color: #00bcd4"
+        >Tafadzwa Allan Praise Mashuwa</span
+      >
+      <span style="color: #ccc">
+        <p>
+          A Tech Enthusiast, Software Developer and UI/UX Designer. I build web
+          and desktop apps with love for clean UI an seamless UX. Based in
+          Zimbabwe, I enjoy coding creative and functional solution.
+        </p>
+        <p>
+          Frontend developer, passionate about building clean UI web apps using
+          modern technologies.
+        </p>
+      </span>
+    </section>
 
-  <section id="contact">
-    <h3>Contact Me</h3>
-    <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="project-grid">
+        <!-- Project Cards -->
+        <div class="project-card">
+          <div class="dopefabricscard">
+            <img src="thumbnail.png" alt="Dope Fabrics' Project" />
+            <h4 style="color: #0ec257">Dope Fabrics' Management System</h4>
+            <p>
+              A System for the Dope Fabrics co, to manage their orders, clients,
+              sales & stocks. Employees can log into the system with their
+              unique username and password. The Top Management can add or remove
+              a user, using their admin key. Every user's events or transactions
+              are tracked and can be accessed by the Top Management.
+            </p>
+            <a href="#">View on GitHub</a>
+          </div>
+          <div class="dopefabricscard">
+            <img src="tictactoe.png" alt="Dope Fabrics' Project" />
+            <h4 style="color: hotpink">Tic-Tac-Toe</h4>
+            <p>
+              A System for the Dope Fabrics co, to manage their orders, clients,
+              sales & stocks. Employees can log into the system with their
+              unique username and password. The Top Management can add or remove
+              a user, using their admin key. Every user's events or transactions
+              are tracked and can be accessed by the Top Management.
+            </p>
+            <a href="#">View on GitHub</a>
+          </div>
+        </div>
+        <!-- More cards... -->
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2026 mashuallan. All rights reserved.</p>
-  </footer>
-</body>
+    <section id="skills">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span
+        ><span>React</span> <span>Node.js</span><span>Express</span
+        ><span>MongoDB</span><span>Git</span>
+      </div>
+    </section>
 
+    <section class="section contact" style="border-top: 1.5px solid #00bcd4">
+      <h2>Contact Me</h2>
+      <p>Let's build something cool together</p>
+      <a href="mailto:mashuwaallan@gmail.com">Send mail</a>
+    </section>
 
+    <footer>
+      <p>© 2026 mashuallan. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
